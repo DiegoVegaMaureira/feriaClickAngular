@@ -18,8 +18,23 @@ export class CuerpoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    if(!this.listaProductos){
+      console.log("vacio");
+      return;
+    }
+
     let cuerpo = document.getElementById("contenidoInicio");
-    let cont = cuerpo?.getElementsByTagName("div");
+    const container = cuerpo?.getElementsByTagName("div");
+
+    if(!container)
+      return;
+
+    container?.item(0)?.appendChild(
+      document.createElement(
+        'div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="row"'
+      )
+    );
 
     this.listaProductos.productos.forEach(function (producto){
       let col = document.createElement('div class="col mb-5"');
@@ -33,13 +48,13 @@ export class CuerpoComponent implements OnInit {
       card.appendChild(document.createElement(
         `
         <div class="card-body p-4">
-            <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">`+producto.nombre+`</h5>
-                <!-- Product price-->
-                `+producto.precio+`
-            </div>
-        </div>
+          <div class="text-center">
+            <!-- Product name-->
+            <h5 class="fw-bolder">`+producto.nombre+`</h5>
+            <!-- Product price-->
+            `+producto.precio+`
+          </div>
+      </div>
         `
       ))
 
@@ -51,7 +66,7 @@ export class CuerpoComponent implements OnInit {
         `
       ))
 
-      col.appendChild(card);
+      container.item(0)?.appendChild(card);
 
     });
   }
