@@ -1,0 +1,12 @@
+{
+    "productos":[
+        {"nombre" : "Manzana", "source" : "https://down.imgspng.com/download/0720/apple_PNG12403.png" , "precio" : "$1790/Kg"},
+        {"nombre" : "Palta", "source" : "http://assets.stickpng.com/thumbs/585ea392cb11b227491c3515.png" , "precio" : "$5.000/kg"},
+        {"nombre" : "Banana", "source" : "https://www.freepnglogos.com/uploads/banana-png/banana-school-council-drapers-mills-primary-academy-little-0.png" , "precio" : "$1290"},
+        {"nombre" : "Lechuga", "source" : "https://assets.stickpng.com/images/585ea506cb11b227491c3525.png" , "precio" : "$600 c/u"},
+        {"nombre" : "Pera", "source" : "https://assets.stickpng.com/images/580b57fcd9996e24bc43c17d.png" , "precio" : "$1200/Kg"},
+        {"nombre" : "Sandia", "source" : "https://www.pngall.com/wp-content/uploads/2016/04/Watermelon-Free-Download-PNG.png" , "precio" : "$3990 c/u"},
+        {"nombre" : "Cebolla", "source" : "https://hortalistas.cl/wp-content/uploads/2020/03/cebolla.png" , "precio" : "$1000/Kg"},
+        {"nombre" : "Papas", "source" : "https://jumbo.vtexassets.com/arquivos/ids/412166-360-360?width=360&height=360&aspect=true" , "precio" : "$1190/Kg"}
+    ]
+}

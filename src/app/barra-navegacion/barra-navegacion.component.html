@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg" style="background-color: orange">     
+    <div class="container px-4 px-lg-5" >                
+
+        <!--Icono-->
+        <a class="navbar-brand" href="#">
+            <img src="https://previews.123rf.com/images/niyazz/niyazz1309/niyazz130900156/22046029-las-letras-y-los-s%C3%ADmbolos-en-el-fuego-letra-f-.jpg" height="50" alt="F">
+        </a>
+
+        <!--Nombre Empresa-->
+        <a class="navbar-brand" id="storeName" style="color: white">Feria Click</a>
+
+        <!--Boton Home-->
+        <button class="navbar-toggler" style="color: white" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <!--botones-->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!" style="color: white">Inicio</a></li>
+                <li class="nav-item justify-content-center"><a class="nav-link" href="#!" style="color: white">Acerca de</a></li>
+            </ul>
+            <div class="input-group" style="margin-right: 50px;">
+                <div class="form-control" >
+                    <input type="search" id="searchbar" class="form-control" />
+                </div>                        
+                <button type="button" class="btn btn-primary">
+                    <i class="bi bi-search"></i>
+                </button> 
+            </div>
+            <div class="justify-content-around">
+                <form class="d-flex justify-content-around">
+                    <button class="btn btn-outline-dark" type="submit" style="background-color: white">
+                        <i class="bi-cart-fill me-1"></i>
+                            Carro
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cartProductsAmount">0</span>
+                    </button>
+                </form>
+            </div>
+            <div class="just" style="margin: 10px">
+                <form class="d-flex justify-content-around form-control">
+                    <button type="submit">
+                        <!--link falso al trabajar de forma local-->
+                        <i class="bi bi-person-fill form-control">
+                            <a href="login.html">Ingreso</a>
+                        </i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
