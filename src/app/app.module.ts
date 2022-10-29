@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
+import { BotonComponent } from './boton/boton.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { CuerpoComponent } from './cuerpo/cuerpo.component';
     AppComponent,
     BarraNavegacionComponent,
     CuerpoComponent,
+    BotonComponent,
   ],
   imports: [
     BrowserModule,

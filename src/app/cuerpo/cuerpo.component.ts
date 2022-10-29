@@ -33,7 +33,7 @@ export class CuerpoComponent implements OnInit {
     if(!container)
       return;
 
-    let elemento;
+    let elemento: HTMLElement;
 
     elemento = document.createElement('div')
     elemento.className = 'row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'
@@ -46,19 +46,20 @@ export class CuerpoComponent implements OnInit {
       col.className ='col mb-5'
       let card = document.createElement('div');
       card.className = 'card h-100'
-      col.appendChild(card)
+      
 
       let imagen = document.createElement('img')
       imagen.className = 'card-img-top'
+      imagen.src= producto.source
       imagen.alt = producto.nombre
-      card.appendChild(imagen)
+      
 
-      let div1 = document.createElement('div')
-      div1.className = 'card-body p-4'
+      let nombreProd = document.createElement('div')
+      nombreProd.className = 'card-body p-4'
 
       let div2 = document.createElement('div')
       div2.className = 'text-center'
-      div1.appendChild(div2)
+      nombreProd.appendChild(div2)
 
       let nombre = document.createElement('h5')
       nombre.className = 'fw-bolder'
@@ -67,7 +68,11 @@ export class CuerpoComponent implements OnInit {
 
       div2.insertAdjacentText('beforeend',producto.precio)
 
-      container.item(0)?.appendChild(card);
+      card.appendChild(imagen)
+      card.appendChild(nombreProd)
+      card.appendChild(document.createElement('app-boton'))
+      col.appendChild(card)
+      elemento.appendChild(card);
 
     });
   }
