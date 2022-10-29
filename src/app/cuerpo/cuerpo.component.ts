@@ -7,6 +7,7 @@ import { ProductoService } from './productos.service';
   styleUrls: ['./cuerpo.component.scss']
 })
 
+
 export class CuerpoComponent implements OnInit {
 
   
@@ -16,6 +17,8 @@ export class CuerpoComponent implements OnInit {
   constructor(servicio: ProductoService) { 
     this.listaProductos = servicio.getProductos();
   }
+
+  
 
   ngOnInit(): void {
 
@@ -30,41 +33,39 @@ export class CuerpoComponent implements OnInit {
     if(!container)
       return;
 
-    container?.item(0)?.appendChild(
-      document.createElement(
-        'div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="row"'
-      )
-    );
+    let elemento;
+
+    elemento = document.createElement('div')
+    elemento.className = 'row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'
+
+    container?.item(0)?.appendChild(elemento);
 
     this.listaProductos.productos.forEach(function (producto){
-      let col = document.createElement('div class="col mb-5"');
-      let card = document.createElement('div class="card h-100"');
+      
+      let col = document.createElement('div');
+      col.className ='col mb-5'
+      let card = document.createElement('div');
+      card.className = 'card h-100'
+      col.appendChild(card)
 
-      card.appendChild(document.createElement(
-        'img class="card-img-top" src='+ producto.source+' alt="'+producto.nombre+'" /'
-      ))
-      console.log(producto.nombre, producto.precio, producto.source);
+      let imagen = document.createElement('img')
+      imagen.className = 'card-img-top'
+      imagen.alt = producto.nombre
+      card.appendChild(imagen)
 
-      card.appendChild(document.createElement(
-        `
-        <div class="card-body p-4">
-          <div class="text-center">
-            <!-- Product name-->
-            <h5 class="fw-bolder">`+producto.nombre+`</h5>
-            <!-- Product price-->
-            `+producto.precio+`
-          </div>
-      </div>
-        `
-      ))
+      let div1 = document.createElement('div')
+      div1.className = 'card-body p-4'
 
-      card.appendChild(document.createElement(
-        `
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carro</a></div>
-        </div>
-        `
-      ))
+      let div2 = document.createElement('div')
+      div2.className = 'text-center'
+      div1.appendChild(div2)
+
+      let nombre = document.createElement('h5')
+      nombre.className = 'fw-bolder'
+      nombre.textContent = producto.nombre
+      div2.appendChild(nombre)
+
+      div2.insertAdjacentText('beforeend',producto.precio)
 
       container.item(0)?.appendChild(card);
 
