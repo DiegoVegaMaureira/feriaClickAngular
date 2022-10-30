@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
-import { BotonComponent } from './boton/boton.component';
+import { CarruselComponent } from './carrusel/carrusel.component';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import { BotonComponent } from './boton/boton.component';
     AppComponent,
     BarraNavegacionComponent,
     CuerpoComponent,
-    BotonComponent,
+    CarruselComponent,
   ],
   imports: [
     BrowserModule,

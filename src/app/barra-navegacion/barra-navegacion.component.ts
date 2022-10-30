@@ -1,3 +1,4 @@
+import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,4 +15,7 @@ export class BarraNavegacionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  login(app: AppComponent){
+    app.abrirLogin()
+  }
 }
