@@ -1,4 +1,5 @@
 import { AppComponent } from './../app.component';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,10 +13,32 @@ export class BarraNavegacionComponent implements OnInit {
 
   constructor() { }
 
+  private isPrincipal = true
+  private isLogin = false
+
   ngOnInit(): void {
   }
 
-  login(app: AppComponent){
-    app.abrirLogin()
+  abrirPrincipal(){
+    this.isPrincipal = true
+    this.isLogin = false
+  }
+
+  abrirLogin(){
+    this.isPrincipal = false
+    this.isLogin = true
+  }
+
+  abrirRegistro(){
+    this.isPrincipal = false
+    this.isLogin = false
+  }
+
+  getPrincipal(){
+    return this.isPrincipal
+  }
+
+  getLogin(){
+    return this.isLogin
   }
 }
