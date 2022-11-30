@@ -1,16 +1,16 @@
 <div class = "col-l-1 text-center" >
-    <form  class="container-lg px-3">
+    <form  class="container-lg px-3" (submit)="loginUser($event)">
         <div class = "p-4">
-            <input id="email" placeholder="Correo electronico(obligatorio)" type="name" minlength="3" type="email" required>         
+            <input id="email" placeholder="Correo electronico(obligatorio)" type="name" minlength="3" type="email" id = "loginUsername" required>         
         </div>
-          <input id="password" placeholder="Contraseña(obligatoria)" type="password" minlength="3" name="password" required>
+          <input id="password" placeholder="Contraseña(obligatoria)" type="password" minlength="3" name="password" id = "loginPassword" required>
         <p>
             <a routerLink="/registro">
                 ¿No tienes cuenta? ¡Registrate aquí!
             </a>
         </p>
         <p>
-          <input class="submit" type="submit" value="SUBMIT" routerLink="">
+          <input class="submit" type="submit">
         </p>
     </form>    
 </div>
